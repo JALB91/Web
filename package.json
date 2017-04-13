@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
     "phaser-ce": "^2.7.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.24.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

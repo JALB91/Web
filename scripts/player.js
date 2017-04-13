@@ -1,40 +1,33 @@
 var WebGame = WebGame || {};
 
-WebGame.player = {
 
-    move: function(dir) {
+player = {
 
-        var speed_x = 0;
-        var speed_y = 0;
-        var scale_x = 1;
+	States: { IDLE: "idle", MOVE: "move", DEAD: "dead" },
 
-        switch (dir) {
+	tiles: [],
+	state: "idle",
 
-            case "up":
-                speed_y -= 50;
-                scale_x = 0.5;
-                break;
-            case "down":
-                speed_y += 50;
-                scale_x = - 0.5;
-                break;
-            case "right":
-                speed_x += 50;
-                scale_x = 1;
-                break;
-            case "left":
-                speed_x -= 50;
-                scale_x = - 1;
-                break;
+	init: function(name) {
 
-        }
+		for (var tileset of tilemap.tilesets) {
 
-        this.body.velocity.x = speed_x;
-        this.body.velocity.y = speed_y;
-        this.scale.setTo(scale_x, 1);
+			if (tileset.name == "characters") {
 
-        this.animations.play('walk');
+				for (var tileIndex = 0; tileIndex < tileset.total; tileIndex++) {
 
-    }
+					if (tileset.tileProperties[tileIndex].name == name) {
+
+						console.log(name);
+
+					}
+
+				}
+
+			}
+
+		}
+		
+	},
 
 };
