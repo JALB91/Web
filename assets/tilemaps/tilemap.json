@@ -717,25 +717,25 @@
             {
              "0":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":1,
                  "name":"player_1"
                 },
              "1":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":2,
                  "name":"player_1"
                 },
              "10":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":2,
                  "name":"zombie"
                 },
              "11":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":3,
                  "name":"zombie"
                 },
@@ -789,7 +789,7 @@
                 },
              "2":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":3,
                  "name":"player_1"
                 },
@@ -855,7 +855,7 @@
                 },
              "3":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":1,
                  "name":"player_2"
                 },
@@ -897,163 +897,163 @@
                 },
              "36":
                 {
-                 "direction":"top",
+                 "direction":"up",
                  "frame":1,
                  "name":"player_1"
                 },
              "37":
                 {
-                 "direction":"top",
+                 "direction":"up",
                  "frame":2,
                  "name":"player_1"
                 },
              "38":
                 {
-                 "direction":"top",
+                 "direction":"up",
                  "frame":3,
                  "name":"player_1"
                 },
              "39":
                 {
-                 "direction":"top",
+                 "direction":"up",
                  "frame":1,
                  "name":"player_2"
                 },
              "4":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":2,
                  "name":"player_2"
                 },
              "40":
                 {
-                 "direction":"top",
+                 "direction":"up",
                  "frame":2,
                  "name":"player_2"
                 },
              "41":
                 {
-                 "direction":"top",
+                 "direction":"up",
                  "frame":3,
                  "name":"player_2"
                 },
              "42":
                 {
-                 "direction":"top",
+                 "direction":"up",
                  "frame":1,
                  "name":"player_3"
                 },
              "43":
                 {
-                 "direction":"top",
+                 "direction":"up",
                  "frame":2,
                  "name":"player_3"
                 },
              "44":
                 {
-                 "direction":"top",
+                 "direction":"up",
                  "frame":3,
                  "name":"player_3"
                 },
              "45":
                 {
-                 "direction":"top",
+                 "direction":"up",
                  "frame":1,
                  "name":"zombie"
                 },
              "46":
                 {
-                 "direction":"top",
+                 "direction":"up",
                  "frame":2,
                  "name":"zombie"
                 },
              "47":
                 {
-                 "direction":"top",
+                 "direction":"up",
                  "frame":3,
                  "name":"zombie"
                 },
              "48":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":1,
                  "name":"slime"
                 },
              "49":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":2,
                  "name":"slime"
                 },
              "5":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":3,
                  "name":"player_2"
                 },
              "50":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":3,
                  "name":"slime"
                 },
              "51":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":1,
                  "name":"bat"
                 },
              "52":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":2,
                  "name":"bat"
                 },
              "53":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":3,
                  "name":"bat"
                 },
              "54":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":1,
                  "name":"ghost"
                 },
              "55":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":2,
                  "name":"ghost"
                 },
              "56":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":3,
                  "name":"ghost"
                 },
              "57":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":1,
                  "name":"spider"
                 },
              "58":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":2,
                  "name":"spider"
                 },
              "59":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":3,
                  "name":"spider"
                 },
              "6":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":1,
                  "name":"player_3"
                 },
@@ -1119,7 +1119,7 @@
                 },
              "7":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":2,
                  "name":"player_3"
                 },
@@ -1185,7 +1185,7 @@
                 },
              "8":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":3,
                  "name":"player_3"
                 },
@@ -1215,79 +1215,79 @@
                 },
              "84":
                 {
-                 "direction":"",
+                 "direction":"up",
                  "frame":1,
                  "name":"slime"
                 },
              "85":
                 {
-                 "direction":"",
+                 "direction":"up",
                  "frame":2,
                  "name":"slime"
                 },
              "86":
                 {
-                 "direction":"",
+                 "direction":"up",
                  "frame":3,
                  "name":"slime"
                 },
              "87":
                 {
-                 "direction":"",
+                 "direction":"up",
                  "frame":1,
                  "name":"bat"
                 },
              "88":
                 {
-                 "direction":"",
+                 "direction":"up",
                  "frame":2,
                  "name":"bat"
                 },
              "89":
                 {
-                 "direction":"",
+                 "direction":"up",
                  "frame":3,
                  "name":"bat"
                 },
              "9":
                 {
-                 "direction":"bottom",
+                 "direction":"down",
                  "frame":1,
                  "name":"zombie"
                 },
              "90":
                 {
-                 "direction":"",
+                 "direction":"up",
                  "frame":1,
                  "name":"ghost"
                 },
              "91":
                 {
-                 "direction":"",
+                 "direction":"up",
                  "frame":2,
                  "name":"ghost"
                 },
              "92":
                 {
-                 "direction":"",
+                 "direction":"up",
                  "frame":3,
                  "name":"ghost"
                 },
              "93":
                 {
-                 "direction":"",
+                 "direction":"up",
                  "frame":1,
                  "name":"spider"
                 },
              "94":
                 {
-                 "direction":"",
+                 "direction":"up",
                  "frame":2,
                  "name":"spider"
                 },
              "95":
                 {
-                 "direction":"",
+                 "direction":"up",
                  "frame":3,
                  "name":"spider"
                 }
