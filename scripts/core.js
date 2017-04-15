@@ -1,12 +1,9 @@
 var WebGame = WebGame || {};
 
 
-var map;
 var gameGroup;
 var tilemap;
-var cursor;
 var player;
-var enemy;
 
 
 WebGame.core = function() {};
@@ -22,14 +19,11 @@ WebGame.core.prototype =
 	{
 		tilemap = this.game.add.tilemap('tilemap');
     	tilemap.addTilesetImage('basic_tiles', 'basic_tiles');
-    	tilemap.addTilesetImage('characters', 'characters');
-    	tilemap.addTilesetImage('dead', 'dead');
+    	tilemap.addTilesetImage('characters2', 'characters2');
     	tilemap.addTilesetImage('things', 'things');
 
     	this.groundLayer = tilemap.createLayer('ground_layer');
     	this.gameLayer = tilemap.createLayer('game_layer');
-
-    	//map = new WebGame.Map();
 
     	gameGroup = new WebGame.GameGroup(this.game);
     	gameGroup.classType = WebGame.Character;
@@ -37,7 +31,10 @@ WebGame.core.prototype =
     	player = gameGroup.create(0, 0, "player_1");
     	player.enableCursor = true;
 
-    	enemy = gameGroup.create(10, 10, "slime");
+    	gameGroup.create(5, 5, "player_2");
+    	gameGroup.create(2, 7, "player_3");
+
+    	gameGroup.create(10, 10, "slime");
 
     	cursor = this.game.input.keyboard.createCursorKeys();
     },

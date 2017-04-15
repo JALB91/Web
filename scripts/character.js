@@ -5,11 +5,11 @@ WebGame.Character = class Character extends WebGame.Node
 {
 	constructor(game, x, y, name, frame)
 	{
-		super(game, x, y, "characters", frame);
-
-		this.enableCursor = false;
+		super(game, x, y, "characters2", frame);
 
 		this.name = name;
+		this.movingTo = null;
+		this.targetTime = this.game.rnd.integerInRange(250, 1000);
 
 		this.state = States.IDLE;
 		this.direction = Directions.DOWN;
@@ -19,6 +19,7 @@ WebGame.Character = class Character extends WebGame.Node
 		this.tiles[Directions.DOWN] = [];
 		this.tiles[Directions.RIGHT] = []; 
 		this.tiles[Directions.LEFT] = [];
+		this.tiles[States.DEAD] = [];
 
 		this.init();
 	}
@@ -27,7 +28,7 @@ WebGame.Character = class Character extends WebGame.Node
 	{
 		for (var tileset of tilemap.tilesets)
 		{
-			if (tileset.name == "characters")
+			if (tileset.name == "characters2")
 			{
 				for (var tileIndex in tileset.tileProperties)
 				{
@@ -36,7 +37,14 @@ WebGame.Character = class Character extends WebGame.Node
 
 					if (tile.name == this.name)
 					{
-						this.tiles[tile.direction].push(tile);
+						if (tile.hasOwnProperty('direction'))
+						{
+							this.tiles[tile.direction].push(tile);
+						}
+						else
+						{
+							this.tiles[States.DEAD].push(tile);
+						}
 					}
 				}
 			}
@@ -57,13 +65,73 @@ WebGame.Character = class Character extends WebGame.Node
 		}
 	}
 
+	handleKey(event)
+	{
+		if (this.state != States.IDLE)
+		{
+			return;
+		}
+
+		switch(event.keyCode)
+		{
+			case Phaser.KeyCode.K:
+				this.state = States.DEAD;
+				break;
+			case Phaser.KeyCode.E:
+				break;
+			case Phaser.KeyCode.I:
+				break;
+		}
+	}
+
+	move(dir)
+	{
+		this.direction = dir;
+
+		if (this.state != States.IDLE) 
+		{
+			return;
+		}
+
+		var x = 0;
+		var y = 0;
+
+		switch (dir)
+		{
+			case Directions.UP:
+				y--;
+				break;
+			case Directions.DOWN:
+				y++;
+				break;
+			case Directions.RIGHT:
+				x++;
+				break;
+			case Directions.LEFT:
+				x--;
+				break;
+		}
+
+		let pos = new Phaser.Point(this.gamePos().x + x, this.gamePos().y + y);
+
+		if (WebGame.isPosInGame(pos) && !gameGroup.atGamePos(pos))
+		{
+			this.state = States.BUSY;
+			this.movingTo = pos;
+		}
+		else
+		{
+			this.frame = this.tiles[dir][1].tileIndex;
+		}
+	}
+
 	update()
 	{
 		super.update();
 
 		if (this.state == States.DEAD)
 		{
-
+			this.frame = this.tiles[this.state][0].tileIndex;
 		}
 		else if (this.state == States.IDLE)
 		{
@@ -92,10 +160,39 @@ WebGame.Character = class Character extends WebGame.Node
 			}
 			else
 			{
-				this.frame = this.tiles[this.direction][1].tileIndex;
+				if (this.elapsedTime > this.targetTime)
+				{
+					let num = this.game.rnd.integerInRange(0, 100);
+					let dir;
+
+					if (num < 25)
+					{
+						dir = Directions.UP;
+					}
+					else if (num < 50)
+					{
+						dir = Directions.DOWN;
+					}
+					else if (num < 75)
+					{
+						dir = Directions.RIGHT;
+					}
+					else
+					{
+						dir = Directions.LEFT;
+					}
+
+					this.move(dir);
+					this.elapsedTime = 0;
+					this.targetTime = this.game.rnd.integerInRange(250, 1000);
+				}
+				else
+				{
+					this.frame = this.tiles[this.direction][1].tileIndex;
+				}
 			}
 		}
-		else if (this.state == States.MOVE)
+		else if (this.movingTo)
 		{
 			if (this.direction == Directions.UP)
 			{
@@ -120,49 +217,12 @@ WebGame.Character = class Character extends WebGame.Node
 				this.y % TILE_HEIGHT == 0)
 			{
 				this.state = States.IDLE;
+
+				if (this.gamePos().equals(this.movingTo))
+				{
+					this.movingTo = null;
+				}
 			}
-		}
-	}
-
-	move(dir)
-	{
-		this.direction = dir;
-
-		if (this.state != States.IDLE) 
-		{
-			this.frame = this.tiles[dir][1].tileIndex;
-			return;
-		}
-
-		var x = 0;
-		var y = 0;
-
-		switch (dir)
-		{
-			case Directions.UP:
-				y--;
-				break;
-			case Directions.DOWN:
-				y++;
-				break;
-			case Directions.RIGHT:
-				x++;
-				break;
-			case Directions.LEFT:
-				x--;
-				break;
-		}
-
-		if (WebGame.isPosInGame(new Phaser.Point(this.gamePos().x + x, this.gamePos().y + y)) &&
-			!gameGroup.atGamePos(new Phaser.Point(this.gamePos().x + x, this.gamePos().y + y)))
-		{
-			this.state = States.MOVE;
-			this.x += x;
-			this.y += y;
-		}
-		else
-		{
-			this.frame = this.tiles[dir][1].tileIndex;
 		}
 	}
 };

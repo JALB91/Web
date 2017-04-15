@@ -9,6 +9,13 @@ WebGame.Node = class Node extends Phaser.Sprite
 
 		this.state = States.NONE;
 		this.direction = Directions.DOWN;
+		this.enableCursor = false;
+		this.elapsedTime = 0;
+	}
+
+	handleKey(event)
+	{
+
 	}
 
 	gamePos()
@@ -25,4 +32,11 @@ WebGame.Node = class Node extends Phaser.Sprite
 	{
 		return this.y / TILE_HEIGHT;
 	}
-}
+
+	update()
+	{
+		super.update();
+
+		this.elapsedTime += this.game.time.elapsedMS;
+	}
+};
