@@ -6,8 +6,6 @@ WebGame.GameGroup = class GameGroup extends Phaser.Group
 	constructor(game)
 	{
 		super(game);
-
-		this.game.input.keyboard.onDownCallback = this.handleKey;
 	}
 
 	atGamePos(p)
@@ -26,7 +24,7 @@ WebGame.GameGroup = class GameGroup extends Phaser.Group
 
 	handleKey()
 	{
-		for (var child of gameGroup.children)
+		for (var child of this.children)
 		{
 			if (child.enableCursor)
 			{

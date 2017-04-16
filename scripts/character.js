@@ -21,6 +21,8 @@ WebGame.Character = class Character extends WebGame.Node
 		this.tiles[Directions.LEFT] = [];
 		this.tiles[States.DEAD] = [];
 
+		this.z = this.gamePosX();
+
 		this.init();
 	}
 
@@ -67,6 +69,8 @@ WebGame.Character = class Character extends WebGame.Node
 
 	handleKey(event)
 	{
+		super.handleKey(event);
+
 		if (this.state != States.IDLE)
 		{
 			return;
@@ -78,10 +82,41 @@ WebGame.Character = class Character extends WebGame.Node
 				this.state = States.DEAD;
 				break;
 			case Phaser.KeyCode.E:
+				gameManager.checkForInteraction(this);
 				break;
 			case Phaser.KeyCode.I:
 				break;
 		}
+	}
+
+	interact(node)
+	{
+		let pos = node.gamePos().subtract(this.gamePosX(), this.gamePosY());
+
+		if (Math.abs(pos.x) > Math.abs(pos.y))
+		{
+			if (pos.x > 0)
+			{
+				node.direction = Directions.LEFT;
+			}
+			else
+			{
+				node.direction = Directions.RIGHT;
+			}
+		}
+		else
+		{
+			if (pos.y > 0)
+			{
+				node.direction = Directions.UP;
+			}
+			else
+			{
+				node.direction = Directions.DOWN;
+			}
+		}
+
+		return ("interaction between " + this.name + " and " + node.name);
 	}
 
 	move(dir)
@@ -93,8 +128,8 @@ WebGame.Character = class Character extends WebGame.Node
 			return;
 		}
 
-		var x = 0;
-		var y = 0;
+		let x = 0;
+		let y = 0;
 
 		switch (dir)
 		{
@@ -184,7 +219,7 @@ WebGame.Character = class Character extends WebGame.Node
 
 					this.move(dir);
 					this.elapsedTime = 0;
-					this.targetTime = this.game.rnd.integerInRange(250, 1000);
+					this.targetTime = this.game.rnd.integerInRange(250, 10000);
 				}
 				else
 				{
@@ -217,6 +252,7 @@ WebGame.Character = class Character extends WebGame.Node
 				this.y % TILE_HEIGHT == 0)
 			{
 				this.state = States.IDLE;
+				this.z = this.gamePosX();
 
 				if (this.gamePos().equals(this.movingTo))
 				{

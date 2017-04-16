@@ -11,11 +11,18 @@ WebGame.Node = class Node extends Phaser.Sprite
 		this.direction = Directions.DOWN;
 		this.enableCursor = false;
 		this.elapsedTime = 0;
+
+		this.id = ++WebGame.Node.id;
 	}
 
 	handleKey(event)
 	{
 
+	}
+
+	equals(node)
+	{
+		return this.id === node.id;
 	}
 
 	gamePos()
@@ -40,3 +47,6 @@ WebGame.Node = class Node extends Phaser.Sprite
 		this.elapsedTime += this.game.time.elapsedMS;
 	}
 };
+
+
+WebGame.Node.id = 0;
