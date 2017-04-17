@@ -1,7 +1,7 @@
 var WebGame = WebGame || {};
 
 
-var gameManager = new WebGame.GameManager();
+var gameManager;
 var gameGroup;
 var guiGroup;
 var tilemap;
@@ -19,9 +19,9 @@ WebGame.core.prototype =
 
 	create: function()
 	{
-        this.paused = false;
-
-		tilemap = this.game.add.tilemap('tilemap');
+        gameManager = new WebGame.GameManager(this.game);
+        
+        tilemap = this.game.add.tilemap('tilemap');
     	tilemap.addTilesetImage('basic_tiles', 'basic_tiles');
     	tilemap.addTilesetImage('characters2', 'characters2');
     	tilemap.addTilesetImage('things', 'things');
@@ -46,23 +46,6 @@ WebGame.core.prototype =
     	gameGroup.create(10, 10, "slime");
 
     	cursor = this.game.input.keyboard.createCursorKeys();
-    	this.game.input.keyboard.addCallbacks(this, this.handleKey);
-    },
-
-    handleKey: function(event)
-    {
-        switch(event.keyCode)
-        {
-            case Phaser.KeyCode.SPACE:
-                this.paused = !this.paused;
-                break;
-        }
-
-        if (!this.paused)
-        {
-            gameGroup.handleKey(event);
-            guiGroup.handleKey(event);
-        }
     },
 
 	update: function()

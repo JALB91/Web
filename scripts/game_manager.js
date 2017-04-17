@@ -3,10 +3,50 @@ var WebGame = WebGame || {};
 
 WebGame.GameManager = class GameManager
 {
-	constructor()
+	constructor(game)
+	{
+		this.game = game;
+		this.paused = false;
+
+    	this.game.input.keyboard.addCallbacks(this, this.handleKeyDown, this.handleKeyUp, this.handleKeyPressed);
+    	this.game.input.mouse.onMouseOver = this.onMouseOver;
+	}
+
+	handleKeyDown(event)
+	{
+		if (event.keyCode == Phaser.KeyCode.SPACEBAR)
+		{
+			this.paused = !this.paused;
+			gameGroup.setPaused(this.paused);
+		}
+
+		if (!this.paused)
+		{
+			gameGroup.handleKey(event);
+		}
+
+		guiGroup.handleKey(event);
+	}
+
+	handleKeyUp(event)
 	{
 
 	}
+
+	handleKeyPressed(event)
+	{
+		
+	}
+
+	onMouseOver(event)
+	{
+		
+	}
+    
+    canMoveTo(pos)
+    {
+        return (WebGame.isPosInGame(pos) && !gameGroup.atGamePos(pos));
+    }
 
 	checkForInteraction(nodeA)
 	{

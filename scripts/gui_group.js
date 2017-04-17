@@ -27,4 +27,9 @@ WebGame.GUIGroup = class GUIGroup extends Phaser.Group
 			child.handleKey(event);
 		}
 	}
+
+	highlight(pos)
+	{
+		
+	}
 };

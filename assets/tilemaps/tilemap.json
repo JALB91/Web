@@ -1137,92 +1137,110 @@
              "0":
                 {
                  "direction":"down",
-                 "name":"player_1"
+                 "name":"player_1",
+                 "ord":0
                 },
              "1":
                 {
                  "direction":"down",
-                 "name":"player_1"
+                 "name":"player_1",
+                 "ord":1
                 },
              "10":
                 {
                  "direction":"down",
-                 "name":"zombie"
+                 "name":"zombie",
+                 "ord":1
                 },
              "100":
                 {
                  "direction":"right",
-                 "name":"spider"
+                 "name":"spider",
+                 "ord":1
                 },
              "101":
                 {
                  "direction":"right",
-                 "name":"spider"
+                 "name":"spider",
+                 "ord":2
                 },
              "105":
                 {
                  "direction":"up",
-                 "name":"slime"
+                 "name":"slime",
+                 "ord":0
                 },
              "106":
                 {
                  "direction":"up",
-                 "name":"slime"
+                 "name":"slime",
+                 "ord":1
                 },
              "107":
                 {
                  "direction":"up",
-                 "name":"slime"
+                 "name":"slime",
+                 "ord":2
                 },
              "108":
                 {
                  "direction":"up",
-                 "name":"bat"
+                 "name":"bat",
+                 "ord":0
                 },
              "109":
                 {
                  "direction":"up",
-                 "name":"bat"
+                 "name":"bat",
+                 "ord":1
                 },
              "11":
                 {
                  "direction":"down",
-                 "name":"zombie"
+                 "name":"zombie",
+                 "ord":2
                 },
              "110":
                 {
                  "direction":"up",
-                 "name":"bat"
+                 "name":"bat",
+                 "ord":2
                 },
              "111":
                 {
                  "direction":"up",
-                 "name":"ghost"
+                 "name":"ghost",
+                 "ord":0
                 },
              "112":
                 {
                  "direction":"up",
-                 "name":"ghost"
+                 "name":"ghost",
+                 "ord":1
                 },
              "113":
                 {
                  "direction":"up",
-                 "name":"ghost"
+                 "name":"ghost",
+                 "ord":2
                 },
              "114":
                 {
                  "direction":"up",
-                 "name":"spider"
+                 "name":"spider",
+                 "ord":0
                 },
              "115":
                 {
                  "direction":"up",
-                 "name":"spider"
+                 "name":"spider",
+                 "ord":1
                 },
              "116":
                 {
                  "direction":"up",
-                 "name":"spider"
+                 "name":"spider",
+                 "ord":2
                 },
              "12":
                 {
@@ -1242,67 +1260,80 @@
              "15":
                 {
                  "direction":"left",
-                 "name":"player_1"
+                 "name":"player_1",
+                 "ord":0
                 },
              "16":
                 {
                  "direction":"left",
-                 "name":"player_1"
+                 "name":"player_1",
+                 "ord":1
                 },
              "17":
                 {
                  "direction":"left",
-                 "name":"player_1"
+                 "name":"player_1",
+                 "ord":2
                 },
              "18":
                 {
                  "direction":"left",
-                 "name":"player_2"
+                 "name":"player_2",
+                 "ord":0
                 },
              "19":
                 {
                  "direction":"left",
-                 "name":"player_2"
+                 "name":"player_2",
+                 "ord":1
                 },
              "2":
                 {
                  "direction":"down",
-                 "name":"player_1"
+                 "name":"player_1",
+                 "ord":2
                 },
              "20":
                 {
                  "direction":"left",
-                 "name":"player_2"
+                 "name":"player_2",
+                 "ord":2
                 },
              "21":
                 {
                  "direction":"left",
-                 "name":"player_3"
+                 "name":"player_3",
+                 "ord":0
                 },
              "22":
                 {
                  "direction":"left",
-                 "name":"player_3"
+                 "name":"player_3",
+                 "ord":1
                 },
              "23":
                 {
                  "direction":"left",
-                 "name":"player_3"
+                 "name":"player_3",
+                 "ord":2
                 },
              "24":
                 {
                  "direction":"left",
-                 "name":"zombie"
+                 "name":"zombie",
+                 "ord":0
                 },
              "25":
                 {
                  "direction":"left",
-                 "name":"zombie"
+                 "name":"zombie",
+                 "ord":1
                 },
              "26":
                 {
                  "direction":"left",
-                 "name":"zombie"
+                 "name":"zombie",
+                 "ord":2
                 },
              "27":
                 {
@@ -1322,72 +1353,86 @@
              "3":
                 {
                  "direction":"down",
-                 "name":"player_2"
+                 "name":"player_2",
+                 "ord":0
                 },
              "30":
                 {
                  "direction":"right",
-                 "name":"player_1"
+                 "name":"player_1",
+                 "ord":0
                 },
              "31":
                 {
                  "direction":"right",
-                 "name":"player_1"
+                 "name":"player_1",
+                 "ord":1
                 },
              "32":
                 {
                  "direction":"right",
-                 "name":"player_1"
+                 "name":"player_1",
+                 "ord":2
                 },
              "33":
                 {
                  "direction":"right",
-                 "name":"player_2"
+                 "name":"player_2",
+                 "ord":0
                 },
              "34":
                 {
                  "direction":"right",
-                 "name":"player_2"
+                 "name":"player_2",
+                 "ord":1
                 },
              "35":
                 {
                  "direction":"right",
-                 "name":"player_2"
+                 "name":"player_2",
+                 "ord":2
                 },
              "36":
                 {
                  "direction":"right",
-                 "name":"player_3"
+                 "name":"player_3",
+                 "ord":0
                 },
              "37":
                 {
                  "direction":"right",
-                 "name":"player_3"
+                 "name":"player_3",
+                 "ord":1
                 },
              "38":
                 {
                  "direction":"right",
-                 "name":"player_3"
+                 "name":"player_3",
+                 "ord":2
                 },
              "39":
                 {
                  "direction":"right",
-                 "name":"zombie"
+                 "name":"zombie",
+                 "ord":0
                 },
              "4":
                 {
                  "direction":"down",
-                 "name":"player_2"
+                 "name":"player_2",
+                 "ord":1
                 },
              "40":
                 {
                  "direction":"right",
-                 "name":"zombie"
+                 "name":"zombie",
+                 "ord":1
                 },
              "41":
                 {
                  "direction":"right",
-                 "name":"zombie"
+                 "name":"zombie",
+                 "ord":2
                 },
              "42":
                 {
@@ -1404,67 +1449,80 @@
              "45":
                 {
                  "direction":"up",
-                 "name":"player_1"
+                 "name":"player_1",
+                 "ord":0
                 },
              "46":
                 {
                  "direction":"up",
-                 "name":"player_1"
+                 "name":"player_1",
+                 "ord":1
                 },
              "47":
                 {
                  "direction":"up",
-                 "name":"player_1"
+                 "name":"player_1",
+                 "ord":2
                 },
              "48":
                 {
                  "direction":"up",
-                 "name":"player_2"
+                 "name":"player_2",
+                 "ord":0
                 },
              "49":
                 {
                  "direction":"up",
-                 "name":"player_2"
+                 "name":"player_2",
+                 "ord":1
                 },
              "5":
                 {
                  "direction":"down",
-                 "name":"player_2"
+                 "name":"player_2",
+                 "ord":2
                 },
              "50":
                 {
                  "direction":"up",
-                 "name":"player_2"
+                 "name":"player_2",
+                 "ord":2
                 },
              "51":
                 {
                  "direction":"up",
-                 "name":"player_3"
+                 "name":"player_3",
+                 "ord":0
                 },
              "52":
                 {
                  "direction":"up",
-                 "name":"player_3"
+                 "name":"player_3",
+                 "ord":1
                 },
              "53":
                 {
                  "direction":"up",
-                 "name":"player_3"
+                 "name":"player_3",
+                 "ord":2
                 },
              "54":
                 {
                  "direction":"up",
-                 "name":"zombie"
+                 "name":"zombie",
+                 "ord":0
                 },
              "55":
                 {
                  "direction":"up",
-                 "name":"zombie"
+                 "name":"zombie",
+                 "ord":1
                 },
              "56":
                 {
                  "direction":"up",
-                 "name":"zombie"
+                 "name":"zombie",
+                 "ord":2
                 },
              "57":
                 {
@@ -1477,192 +1535,230 @@
              "6":
                 {
                  "direction":"down",
-                 "name":"player_3"
+                 "name":"player_3",
+                 "ord":0
                 },
              "60":
                 {
                  "direction":"down",
-                 "name":"slime"
+                 "name":"slime",
+                 "ord":0
                 },
              "61":
                 {
                  "direction":"down",
-                 "name":"slime"
+                 "name":"slime",
+                 "ord":1
                 },
              "62":
                 {
                  "direction":"down",
-                 "name":"slime"
+                 "name":"slime",
+                 "ord":2
                 },
              "63":
                 {
                  "direction":"down",
-                 "name":"bat"
+                 "name":"bat",
+                 "ord":0
                 },
              "64":
                 {
                  "direction":"down",
-                 "name":"bat"
+                 "name":"bat",
+                 "ord":1
                 },
              "65":
                 {
                  "direction":"down",
-                 "name":"bat"
+                 "name":"bat",
+                 "ord":2
                 },
              "66":
                 {
                  "direction":"down",
-                 "name":"ghost"
+                 "name":"ghost",
+                 "ord":0
                 },
              "67":
                 {
                  "direction":"down",
-                 "name":"ghost"
+                 "name":"ghost",
+                 "ord":1
                 },
              "68":
                 {
                  "direction":"down",
-                 "name":"ghost"
+                 "name":"ghost",
+                 "ord":2
                 },
              "69":
                 {
                  "direction":"down",
-                 "name":"spider"
+                 "name":"spider",
+                 "ord":0
                 },
              "7":
                 {
                  "direction":"down",
-                 "name":"player_3"
+                 "name":"player_3",
+                 "ord":1
                 },
              "70":
                 {
                  "direction":"down",
-                 "name":"spider"
+                 "name":"spider",
+                 "ord":1
                 },
              "71":
                 {
                  "direction":"down",
-                 "name":"spider"
+                 "name":"spider",
+                 "ord":2
                 },
              "75":
                 {
                  "direction":"left",
-                 "name":"slime"
+                 "name":"slime",
+                 "ord":0
                 },
              "76":
                 {
                  "direction":"left",
-                 "name":"slime"
+                 "name":"slime",
+                 "ord":1
                 },
              "77":
                 {
                  "direction":"left",
-                 "name":"slime"
+                 "name":"slime",
+                 "ord":2
                 },
              "78":
                 {
                  "direction":"left",
-                 "name":"bat"
+                 "name":"bat",
+                 "ord":0
                 },
              "79":
                 {
                  "direction":"left",
-                 "name":"bat"
+                 "name":"bat",
+                 "ord":1
                 },
              "8":
                 {
                  "direction":"down",
-                 "name":"player_3"
+                 "name":"player_3",
+                 "ord":2
                 },
              "80":
                 {
                  "direction":"left",
-                 "name":"bat"
+                 "name":"bat",
+                 "ord":2
                 },
              "81":
                 {
                  "direction":"left",
-                 "name":"ghost"
+                 "name":"ghost",
+                 "ord":0
                 },
              "82":
                 {
                  "direction":"left",
-                 "name":"ghost"
+                 "name":"ghost",
+                 "ord":1
                 },
              "83":
                 {
                  "direction":"left",
-                 "name":"ghost"
+                 "name":"ghost",
+                 "ord":2
                 },
              "84":
                 {
                  "direction":"left",
-                 "name":"spider"
+                 "name":"spider",
+                 "ord":0
                 },
              "85":
                 {
                  "direction":"left",
-                 "name":"spider"
+                 "name":"spider",
+                 "ord":1
                 },
              "86":
                 {
                  "direction":"left",
-                 "name":"spider"
+                 "name":"spider",
+                 "ord":2
                 },
              "9":
                 {
                  "direction":"down",
-                 "name":"zombie"
+                 "name":"zombie",
+                 "ord":0
                 },
              "90":
                 {
                  "direction":"right",
-                 "name":"slime"
+                 "name":"slime",
+                 "ord":0
                 },
              "91":
                 {
                  "direction":"right",
-                 "name":"slime"
+                 "name":"slime",
+                 "ord":1
                 },
              "92":
                 {
                  "direction":"right",
-                 "name":"slime"
+                 "name":"slime",
+                 "ord":2
                 },
              "93":
                 {
                  "direction":"right",
-                 "name":"bat"
+                 "name":"bat",
+                 "ord":0
                 },
              "94":
                 {
                  "direction":"right",
-                 "name":"bat"
+                 "name":"bat",
+                 "ord":1
                 },
              "95":
                 {
                  "direction":"right",
-                 "name":"bat"
+                 "name":"bat",
+                 "ord":2
                 },
              "96":
                 {
                  "direction":"right",
-                 "name":"ghost"
+                 "name":"ghost",
+                 "ord":0
                 },
              "97":
                 {
                  "direction":"right",
-                 "name":"ghost"
+                 "name":"ghost",
+                 "ord":1
                 },
              "98":
                 {
                  "direction":"right",
-                 "name":"ghost"
+                 "name":"ghost",
+                 "ord":2
                 },
              "99":
                 {
                  "direction":"right",
-                 "name":"spider"
+                 "name":"spider",
+                 "ord":0
                 }
             },
          "tilepropertytypes":
@@ -1670,92 +1766,110 @@
              "0":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "1":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "10":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "100":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "101":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "105":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "106":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "107":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "108":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "109":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "11":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "110":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "111":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "112":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "113":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "114":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "115":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "116":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "12":
                 {
@@ -1775,67 +1889,80 @@
              "15":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "16":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "17":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "18":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "19":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "2":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "20":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "21":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "22":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "23":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "24":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "25":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "26":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "27":
                 {
@@ -1855,72 +1982,86 @@
              "3":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "30":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "31":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "32":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "33":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "34":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "35":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "36":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "37":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "38":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "39":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "4":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "40":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "41":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "42":
                 {
@@ -1937,67 +2078,80 @@
              "45":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "46":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "47":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "48":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "49":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "5":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "50":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "51":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "52":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "53":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "54":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "55":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "56":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "57":
                 {
@@ -2010,192 +2164,230 @@
              "6":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "60":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "61":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "62":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "63":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "64":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "65":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "66":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "67":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "68":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "69":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "7":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "70":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "71":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "75":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "76":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "77":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "78":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "79":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "8":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "80":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "81":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "82":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "83":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "84":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "85":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "86":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "9":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "90":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "91":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "92":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "93":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "94":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "95":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "96":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "97":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "98":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 },
              "99":
                 {
                  "direction":"string",
-                 "name":"string"
+                 "name":"string",
+                 "ord":"int"
                 }
             },
          "tilewidth":16
@@ -2214,7 +2406,6 @@
          "tilewidth":16
         }],
  "tilewidth":16,
- "type":"map",
  "version":1,
  "width":100
 }

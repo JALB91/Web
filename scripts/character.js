@@ -79,6 +79,7 @@ WebGame.Character = class Character extends WebGame.Node
 		switch(event.keyCode)
 		{
 			case Phaser.KeyCode.K:
+                this.prevState = this.state;
 				this.state = States.DEAD;
 				break;
 			case Phaser.KeyCode.E:
@@ -149,8 +150,9 @@ WebGame.Character = class Character extends WebGame.Node
 
 		let pos = new Phaser.Point(this.gamePos().x + x, this.gamePos().y + y);
 
-		if (WebGame.isPosInGame(pos) && !gameGroup.atGamePos(pos))
+		if (gameManager.canMoveTo(pos))
 		{
+            this.prevState = this.state;
 			this.state = States.BUSY;
 			this.movingTo = pos;
 		}
@@ -164,6 +166,10 @@ WebGame.Character = class Character extends WebGame.Node
 	{
 		super.update();
 
+		if (this.state == States.NONE)
+		{
+			return;
+		}
 		if (this.state == States.DEAD)
 		{
 			this.frame = this.tiles[this.state][0].tileIndex;
@@ -251,12 +257,13 @@ WebGame.Character = class Character extends WebGame.Node
 			if (this.x % TILE_WIDTH == 0 && 
 				this.y % TILE_HEIGHT == 0)
 			{
-				this.state = States.IDLE;
-				this.z = this.gamePosX();
+				this.z = this.gamePosY();
 
 				if (this.gamePos().equals(this.movingTo))
 				{
 					this.movingTo = null;
+                    this.prevState = this.state;
+				    this.state = States.IDLE;
 				}
 			}
 		}
