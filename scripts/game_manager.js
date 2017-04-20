@@ -8,42 +8,14 @@ WebGame.GameManager = class GameManager
 		this.game = game;
 		this.paused = false;
 
-    	this.game.input.keyboard.addCallbacks(this, this.handleKeyDown, this.handleKeyUp, this.handleKeyPressed);
-    	this.game.input.mouse.onMouseOver = this.onMouseOver;
+    	this.game.input.keyboard.addCallbacks(this, this.onKeyDown, this.onKeyUp, this.onKeyPressed);
+    	this.game.input.mouse.mouseMoveCallback = this.mouseMoveCallback;
+    	this.game.input.mouse.onMouseOut = this.onMouseOut;
+
+    	this.game.input.onTap.add(this.onTap, this);
 	}
 
-	handleKeyDown(event)
-	{
-		if (event.keyCode == Phaser.KeyCode.SPACEBAR)
-		{
-			this.paused = !this.paused;
-			gameGroup.setPaused(this.paused);
-		}
-
-		if (!this.paused)
-		{
-			gameGroup.handleKey(event);
-		}
-
-		guiGroup.handleKey(event);
-	}
-
-	handleKeyUp(event)
-	{
-
-	}
-
-	handleKeyPressed(event)
-	{
-		
-	}
-
-	onMouseOver(event)
-	{
-		
-	}
-    
-    canMoveTo(pos)
+	canMoveTo(pos)
     {
         return (WebGame.isPosInGame(pos) && !gameGroup.atGamePos(pos));
     }
@@ -74,10 +46,63 @@ WebGame.GameManager = class GameManager
 		{
 			let text = nodeA.interact(nodeB);
 
+			nodeB.followNode(nodeA);
+
 			if (text)
 			{
 				guiGroup.showDialog(text);
+				gameGroup.setPaused(true);
 			}
 		}
+	}
+
+	onDialogDismiss()
+	{
+		gameGroup.setPaused(false);
+	}
+
+	onKeyDown(event)
+	{
+		if (event.keyCode == Phaser.KeyCode.SPACEBAR && this.paused == gameGroup.paused)
+		{
+			this.paused = !this.paused;
+			gameGroup.setPaused(this.paused);
+		}
+
+		if (!gameGroup.paused)
+		{
+			gameGroup.onKeyDown(event);
+		}
+
+		guiGroup.onKeyDown(event);
+	}
+
+	onKeyUp(event)
+	{
+
+	}
+
+	onKeyPressed(event)
+	{
+		
+	}
+
+	mouseMoveCallback(event)
+	{
+        guiGroup.mouseMoveCallback(event);
+	}
+
+	onTap(pointer, doubleTap)
+	{
+		if (guiGroup.selected)
+		{
+			player.setPath(WebGame.Path.getPathFor(new Phaser.Point(guiGroup.selected.x, guiGroup.selected.y),
+													player.gamePos()), false);
+		}
+	}
+
+	onMouseOut(event)
+	{
+		guiGroup.onMouseOut(event);
 	}
 };

@@ -1,18 +1,29 @@
 var WebGame = WebGame || {};
 
 
-WebGame.Character = class Character extends WebGame.Node
+WebGame.Character = class Character extends WebGame.TileNode
 {
 	constructor(game, x, y, name, frame)
 	{
 		super(game, x, y, "characters2", frame);
 
 		this.name = name;
+
+		this.path = null;
+		this.pathPos = - 1;
+		this.pathLoop = false;
+
+		this.follow = null;
+
 		this.movingTo = null;
 		this.targetTime = this.game.rnd.integerInRange(250, 1000);
 
+		this.prevState = States.NONE;
 		this.state = States.IDLE;
+
 		this.direction = Directions.DOWN;
+
+		this.enableCursor = false;
 
 		this.tiles = {};
 		this.tiles[Directions.UP] = [];																																																																																	
@@ -67,26 +78,16 @@ WebGame.Character = class Character extends WebGame.Node
 		}
 	}
 
-	handleKey(event)
+	setPaused(paused)
 	{
-		super.handleKey(event);
-
-		if (this.state != States.IDLE)
+		if (paused)
 		{
-			return;
+			this.prevState = this.state;
+			this.state = States.NONE;
 		}
-
-		switch(event.keyCode)
+		else
 		{
-			case Phaser.KeyCode.K:
-                this.prevState = this.state;
-				this.state = States.DEAD;
-				break;
-			case Phaser.KeyCode.E:
-				gameManager.checkForInteraction(this);
-				break;
-			case Phaser.KeyCode.I:
-				break;
+			this.state = this.prevState;
 		}
 	}
 
@@ -117,16 +118,29 @@ WebGame.Character = class Character extends WebGame.Node
 			}
 		}
 
+		node.turn(node.direction);
+
 		return ("interaction between " + this.name + " and " + node.name);
+	}
+
+	turn(dir)
+	{
+		this.direction = dir;
+		this.frame = this.tiles[dir][1].tileIndex;
 	}
 
 	move(dir)
 	{
+		if (!dir)
+		{
+			return false;
+		}
+
 		this.direction = dir;
 
 		if (this.state != States.IDLE) 
 		{
-			return;
+			return false;
 		}
 
 		let x = 0;
@@ -155,10 +169,57 @@ WebGame.Character = class Character extends WebGame.Node
             this.prevState = this.state;
 			this.state = States.BUSY;
 			this.movingTo = pos;
+
+			return true;
 		}
 		else
 		{
 			this.frame = this.tiles[dir][1].tileIndex;
+		}
+
+		return false;
+	}
+
+	setPath(path, loop)
+	{
+		this.path = path;
+		this.pathPos = 0;
+		this.pathLoop = loop;
+	}
+
+	followNode(node)
+	{
+		if (node)
+		{
+			this.path = null;
+		}
+
+		this.follow = node;
+	}
+
+	stopFollow()
+	{
+		this.follow = null;
+	}
+
+	handleKey(event)
+	{
+		if (this.state != States.IDLE)
+		{
+			return;
+		}
+
+		switch(event.keyCode)
+		{
+			case Phaser.KeyCode.K:
+                this.prevState = this.state;
+				this.state = States.DEAD;
+				break;
+			case Phaser.KeyCode.E:
+				gameManager.checkForInteraction(this);
+				break;
+			case Phaser.KeyCode.I:
+				break;
 		}
 	}
 
@@ -176,7 +237,33 @@ WebGame.Character = class Character extends WebGame.Node
 		}
 		else if (this.state == States.IDLE)
 		{
-			if (this.enableCursor)
+			if (this.follow)
+			{
+				let dir = WebGame.getDirectionFor(this.gamePos(), this.follow.gamePos());
+
+				this.move(dir);
+			}
+			else if (this.path && this.path.length > this.pathPos)
+			{
+				let dir = WebGame.getDirectionFor(this.gamePos(), this.path[this.pathPos]);
+
+				if (this.move(dir))
+				{
+					this.pathPos++;
+				}
+			}
+			else if (this.path && this.path.length <= this.pathPos)
+			{
+				if (!this.pathLoop)
+				{
+					this.path = null;
+				}
+				else
+				{
+					this.pathPos = 0;
+				}
+			}
+			else if (this.enableCursor)
 			{
 				if (cursor.up.isDown)
 				{

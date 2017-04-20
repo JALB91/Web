@@ -6,10 +6,14 @@ WebGame.GameGroup = class GameGroup extends Phaser.Group
 	constructor(game)
 	{
 		super(game);
+
+		this.paused = false;
 	}
 
 	setPaused(paused)
 	{
+		this.paused = paused;
+		
 		for (var child of this.children)
 		{
 			child.setPaused(paused);
@@ -35,25 +39,28 @@ WebGame.GameGroup = class GameGroup extends Phaser.Group
 		let x = pos.x;
 		let y = pos.y;
 
-		let res = [ new Phaser.Point(x + 1, y), new Phaser.Point(x, y - 1), new Phaser.Point(x - 1, y), new Phaser.Point(x, y + 1) ];
+		let res = [ new Phaser.Point(x + 1, y), new Phaser.Point(x, y + 1), new Phaser.Point(x - 1, y), new Phaser.Point(x, y - 1) ];
+
+		for (let i = 0; i < res.length; i++)
+		{
+			let node = this.atGamePos(res[i]);
+
+			if (!WebGame.isPosInGame(res[i]) || (node && node.blocking))
+			{
+				res.splice(i, 1);
+				i--;
+			}
+		}
 
 		if ((x + y) % 2 == 0)
 		{
 			res.reverse();
 		}
 
-		for (var neighbour of res)
-		{
-			if (atGamePos(neighbour) || !WebGame.isPosInGame(neighbour))
-			{
-				res.slice(res.indexOf(neighbour));
-			}
-		}
-
 		return res;
 	}
 
-	handleKey(event)
+	onKeyDown(event)
 	{
 		for (var child of this.children)
 		{
@@ -62,6 +69,16 @@ WebGame.GameGroup = class GameGroup extends Phaser.Group
 				child.handleKey(event);
 			}
 		}
+	}
+
+	onKeyUp(event)
+	{
+
+	}
+
+	onKeyPressed(event)
+	{
+
 	}
 
 	update()

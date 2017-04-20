@@ -21,6 +21,7 @@ WebGame.Text = class Text extends Phaser.Text
 			if (this.toDisplay === this.displayed)
 			{
 				guiGroup.remove(this, true);
+				gameManager.onDialogDismiss();
 			}
 			else
 			{

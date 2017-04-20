@@ -8,24 +8,21 @@ WebGame.isPosInGame = function(pos)
 
 WebGame.getDirectionFor = function(start, end)
 {
-	let x = start.x - end.x;
-	let y = start.y - end.y;
-
-	if (x == 1)
+	if (start.x < end.x)
 	{
 		return Directions.RIGHT;
 	}
-	else if (x == - 1)
+	else if (start.x > end.x)
 	{
 		return Directions.LEFT;
 	}
-	else if (y == - 1)
-	{
-		return Directions.UP;
-	}
-	else if (y == 1)
+	else if (start.y < end.y)
 	{
 		return Directions.DOWN;
+	}
+	else if (start.y > end.y)
+	{
+		return Directions.UP;
 	}
 
 	return null;
@@ -41,12 +38,22 @@ Phaser.Point.prototype.toWorldPos = function()
 	return Phaser.Point.toWorldPos(this);
 };
 
+Phaser.Point.prototype.toKey = function()
+{
+	return Phaser.Point.toKey(this);
+};
+
 Phaser.Point.toGamePos = function(p)
 {
-	return new Phaser.Point(p.x / TILE_WIDTH, p.y / TILE_HEIGHT);
-}
+	return new Phaser.Point(Math.floor(p.x / TILE_WIDTH), Math.floor(p.y / TILE_HEIGHT));
+};
 
 Phaser.Point.toWorldPos = function(p)
 {
-	return new Phaser.Point(this.x * TILE_WIDTH, this.y * TILE_HEIGHT);
+	return new Phaser.Point(p.x * TILE_WIDTH, p.y * TILE_HEIGHT);
+};
+
+Phaser.Point.toKey = function(p)
+{
+	return p.x.toString() + " " + p.y.toString();
 }
