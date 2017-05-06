@@ -19,8 +19,6 @@ WebGame.preload.prototype = {
 		this.scale.pageAlignHorizontally = true;
 		this.scale.pageAlignVertically = true;
 
-		this.game.physics.startSystem(Phaser.Physics.ARCADE);
-
     	this.game.state.start('core');
 
 	},

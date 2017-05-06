@@ -83,11 +83,12 @@ WebGame.Character = class Character extends WebGame.TileNode
 		if (paused)
 		{
 			this.prevState = this.state;
-			this.state = States.NONE;
+			this.state = States.PAUSED;
 		}
 		else
 		{
 			this.state = this.prevState;
+			this.prevState = States.PAUSED;
 		}
 	}
 
@@ -227,7 +228,7 @@ WebGame.Character = class Character extends WebGame.TileNode
 	{
 		super.update();
 
-		if (this.state == States.NONE)
+		if (this.state == States.NONE || this.state == States.PAUSED)
 		{
 			return;
 		}

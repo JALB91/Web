@@ -42,7 +42,15 @@ WebGame.GUIGroup = class GUIGroup extends Phaser.Group
 
 	mouseMoveCallback(event)
 	{
-		let tile = tilemap.getTileWorldXY(event.layerX, event.layerY, 33, 33, 'ground_layer');
+		let x = this.game.math.floorTo(((event.x - this.game.scale.offset.x) * this.game.scale.scaleFactor.x) / TILE_WIDTH);
+		let y = this.game.math.floorTo(((event.y - this.game.scale.offset.y) * this.game.scale.scaleFactor.y) / TILE_HEIGHT);
+
+		let tile = tilemap.getTile(x, y, 'ground_layer');
+
+		if (!tile)
+		{
+			return;
+		}
 
 		if (this.selected && (this.selected.x != tile.x || this.selected.y != tile.y))
 		{
